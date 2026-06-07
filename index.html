@@ -22,9 +22,10 @@
                 <span class="logo-white">Hanif</span><span class="logo-orange">Garzia</span>
             </a>
             <nav>
+                <a href="#beranda" class="nav-link active">Home</a>
                 <a href="#company" class="nav-link">Company</a>
-                <a href="projects.html" class="nav-link">Projects</a>
-                <a href="penutup.html" class="nav-link">Penutup</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#penutup" class="nav-link">Penutup</a>
             </nav>
             <div class="header-right">
                 <button class="theme-toggle" aria-label="Toggle Theme">
@@ -64,53 +65,37 @@
     </header>
 
     <!-- ==================== HERO SECTION ==================== -->
-    <main id="beranda" class="hero">
-        <div class="section-container">
-            <!-- Left Info Panel -->
-            <div class="hero-content">
-                <h1>Presentasi Laporan<br>Magang di <span>PT. APPKEY</span></h1>
-                <p class="subtitle">
-                    Presentasi ini dibuat untuk mendokumentasikan dan menjelaskan tentang profil perusahaan, kegiatan
-                    yang dilakukan, serta proyek-proyek yang sudah diselesaikan di tempat PKL.
-                </p>
-
-                <!-- Action Button Group -->
-                <div class="btn-group">
-                    <a href="#company" class="btn btn-primary">
-                        Mulai Presentasi
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M6 9l6 6 6-6" />
-                        </svg>
-                    </a>
-                    <a href="#" class="btn btn-secondary">
-                        Lihat Laporan PDF
-                    </a>
-                </div>
-
-                <!-- Duration Badge -->
-                <div class="duration-badge">
-                    <!-- Calendar Icon SVG -->
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                        <line x1="16" y1="2" x2="16" y2="6"></line>
-                        <line x1="8" y1="2" x2="8" y2="6"></line>
-                        <line x1="3" y1="10" x2="21" y2="10"></line>
-                    </svg>
-                    <span>Durasi Magang: 8 Januari — 8 Juni 2026</span>
-                </div>
+    <main id="beranda" class="hero hero-centered">
+        <div class="hero-inner-content">
+            <div class="duration-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>Durasi Magang: 8 Januari — 8 Juni 2026</span>
             </div>
 
-            <!-- Right Profile Image Panel -->
-            <div class="profile-area">
-                <div class="profile-card">
-                    <div class="profile-img-container">
-                        <!-- Silakan masukkan url/path gambar Anda di src="path_ke_gambar.jpg" nanti -->
-                        <img src="img/profil.jpg" alt="Cover Laporan Magang" class="profile-img">
-                    </div>
-                    <div class="floating-tag">Web Dev.</div>
-                </div>
+            <h1>Laporan Magang di <span>PT. APPKEY</span></h1>
+            
+            <p class="subtitle">
+                Presentasi ini dibuat untuk mendokumentasikan dan menjelaskan tentang profil perusahaan, kegiatan
+                yang dilakukan, serta proyek-proyek yang sudah diselesaikan di tempat PKL.
+            </p>
+
+            <div class="btn-group">
+                <a href="#company" class="btn btn-primary">
+                    Mulai Presentasi
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg>
+                </a>
+                <a href="#" class="btn btn-secondary">
+                    Lihat Laporan PDF
+                </a>
             </div>
         </div>
     </main>
@@ -136,9 +121,6 @@
                         <img src="img/company3.jpg" alt="PT. APPKEY Team Meeting" class="thumb-img">
                     </div>
                     <div class="thumb-card">
-                        <img src="img/company4.jpg" alt="PT. APPKEY Team Meeting" class="thumb-img">
-                    </div>
-                    <div class="thumb-card">
                         <img src="img/company5.jpg" alt="PT. APPKEY Team Meeting" class="thumb-img">
                     </div>
                 </div>
@@ -148,7 +130,7 @@
             <div class="section-content">
                 <div class="section-tag">Informasi Umum</div>
                 <p class="section-desc">
-                    PT APPKEY merupakan perusahaan pengembang aplikasi dan sistem web inovatif yang mengadopsi tren Vibe Coding—kolaborasi revolusioner antara AI dan engineer ahli. Mereka berkomitmen menghadirkan layanan yang cepat, fleksibel, 
+                    PT APPKEY merupakan perusahaan pengembang aplikasi dan sistem web inovatif yang mengadopsi tren Vibe Coding—kolaborasi revolusioner antara AI and engineer ahli. Mereka berkomitmen menghadirkan layanan yang cepat, fleksibel, 
                     dan berkualitas tinggi dengan efisiensi proses hingga 3x lebih cepat dari metode konvensional, siap mendukung akselerasi dan kesuksesan bisnis Anda.
                 </p>
 
@@ -192,7 +174,167 @@
         </div>
     </section>
 
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section id="projects" class="page-section">
+        <div class="section-container">
+            <!-- Header Row -->
+            <div class="tools-header">
+                <div class="section-tag">Tools</div>
+            </div>
 
+            <!-- Cards Row -->
+            <div class="tools-grid">
+                <!-- Card 1: Antigravity -->
+                <div class="tool-card">
+                    <div class="tool-logo-container">
+                        <img src="img/antigravity.png" alt="Antigravity" class="tool-logo">
+                    </div>
+                    <div class="tool-meta">
+                        <h4 class="tool-name">Antigravity</h4>
+                        <span class="tool-category">Text Editor Kolaborasi realtime</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: Git & GitHub -->
+                <div class="tool-card">
+                    <div class="tool-logo-container">
+                        <img src="img/Gitlab.png" alt="Git & GitHub" class="tool-logo">
+                    </div>
+                    <div class="tool-meta">
+                        <h4 class="tool-name">Git Lab</h4>
+                        <span class="tool-category">Version Control System</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Spread -->
+                <div class="tool-card">
+                    <div class="tool-logo-container">
+                        <img src="img/spread.png" alt="Figma" class="tool-logo">
+                    </div>
+                    <div class="tool-meta">
+                        <h4 class="tool-name">Spreadsheet</h4>
+                        <span class="tool-category">Data Management</span>
+                    </div>
+                </div>
+
+                 <!-- Card 4: Gemini -->
+                <div class="tool-card">
+                    <div class="tool-logo-container">
+                        <img src="img/gemini.png" alt="Figma" class="tool-logo">
+                    </div>
+                    <div class="tool-meta">
+                        <h4 class="tool-name">Gemini</h4>
+                        <span class="tool-category"> AI Asisten / Helper</span>
+                    </div>
+                </div>
+
+                 <!-- Card 5: Claude -->
+                <div class="tool-card">
+                    <div class="tool-logo-container">
+                        <img src="img/claude.png" alt="Figma" class="tool-logo">
+                    </div>
+                    <div class="tool-meta">
+                        <h4 class="tool-name">Claude AI</h4>
+                        <span class="tool-category"> AI Asisten / Helper</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WORK PROJECTS SECTION ==================== -->
+    <section id="work-projects" class="page-section">
+        <div class="section-container project-list-container">
+            <!-- Centered Section Title -->
+            <div class="project-list-header">
+                <h2 class="project-section-title"><span>Tugas Yang Di Kerjakan</span></h2>
+            </div>
+
+            <!-- Projects Grid/List -->
+            <div class="project-items-wrapper">
+                <!-- Project 1 -->
+                <div class="project-item-card">
+                    <div class="project-item-meta">
+                        <h3 class="project-item-title">Website Travel</h3>
+                        <p class="project-item-desc">
+                            Tugas pertama yang diberikan.
+                        </p>
+                    </div>
+                    <!-- Project Screenshots Row with Browser Mock -->
+                    <div class="project-item-screens">
+                        <div class="browser-mockup">
+                            <div class="browser-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <div class="browser-address"><a href="https://docs.google.com/spreadsheets/d/1HDB2GP63CqRuZc7X4kpqC7I1zT0w8_lmHjeU-SzDP34/edit?gid=0#gid=0" target="_blank">Demo site HTML ── Spreadsheet</a></div>
+                            </div>
+                            <div class="browser-body">
+                                <img src="img/p1/trav1.png" alt="Tugas Web Trav 1" class="project-img">
+                            </div>
+                        </div>
+
+                        <div class="browser-mockup">
+                            <div class="browser-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <div class="browser-address"><a href="https://docs.google.com/spreadsheets/d/1eK_3so4fUf9N0HtnDoWl1yXSoDLWdjd-GZ70PuvOkYY/edit?gid=0#gid=0" target="_blank">Plan list section ── Spreadsheet</a></div>
+                            </div>
+                            <div class="browser-body">
+                                <img src="img/p1/trav2.png" alt="Tugas Web Trav 2" class="project-img">
+                            </div>
+                        </div>
+
+                        <div class="browser-mockup">
+                            <div class="browser-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <div class="browser-address">Open task Antigravity</div>
+                            </div>
+                            <div class="browser-body">
+                                <img src="img/p1/trav3.png" alt="Tugas Web Trav 3" class="project-img">
+                            </div>
+                        </div>
+
+                        <div class="browser-mockup">
+                            <div class="browser-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <div class="browser-address"><a href="file:///C:/Users/ASUS/Documents/smk/rabbtravel/index.html">web Travel ── Beranda</a></div>
+                            </div>
+                            <div class="browser-body">
+                                <img src="img/p1/trav4.png" alt="Tugas Web Trav 4" class="project-img">
+                            </div>
+                        </div>
+
+                        <div class="browser-mockup">
+                            <div class="browser-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <div class="browser-address">web Travel ── Pop up reservasi</div>
+                            </div>
+                            <div class="browser-body">
+                                <img src="img/p1/trav5.png" alt="Tugas Web Trav 5" class="project-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PENUTUP SECTION ==================== -->
+    <section id="penutup" class="page-section" style="display: flex; align-items: center; justify-content: center; min-height: calc(100vh - 80px);">
+        <div class="section-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 1.5rem;">
+            <h1 class="thank-you-title">
+                Terima   Kasih !
+            </h1>
+        </div>
+    </section>
 
     <!-- ==================== FOOTER SECTION ==================== -->
     <footer>
@@ -201,8 +343,6 @@
             <p class="footer-sub">Laporan PKL SMK - PT. APPKEY</p>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
-
 </html>

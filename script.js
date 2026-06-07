@@ -70,6 +70,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ==================== SCROLL & HEADER EFFECT ====================
+    const header = document.querySelector('header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    }
+
     // ==================== INDEX PAGE: SCROLL & GALLERY ====================
     const sections = document.querySelectorAll('main, section');
     if (sections.length > 0 && navLinks.length > 0) {
@@ -85,10 +97,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
             navLinks.forEach(link => {
                 link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
+                const href = link.getAttribute('href');
+                if (href === `#${current}` || (current === 'work-projects' && href === '#projects')) {
                     link.classList.add('active');
                 }
             });
+        });
+    }
+
+    // ==================== VIEWPORT REVEAL ANIMATIONS ====================
+    const revealSections = document.querySelectorAll('#projects, #work-projects, #penutup');
+    if ('IntersectionObserver' in window && revealSections.length > 0) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.05,
+            rootMargin: '0px 0px -50px 0px'
+        });
+        revealSections.forEach(section => {
+            revealObserver.observe(section);
+        });
+    } else {
+        // Fallback for older browsers
+        revealSections.forEach(section => {
+            section.classList.add('revealed');
         });
     }
 
@@ -107,12 +144,15 @@ document.addEventListener('DOMContentLoaded', () => {
             // Add fade-out transition effect
             mainMediaImg.style.opacity = 0;
 
-            setTimeout(() => {
+            // Load completely offscreen first to prevent visual flashing/choppiness
+            const tempImg = new Image();
+            tempImg.src = img.src;
+            tempImg.onload = () => {
                 mainMediaImg.src = img.src;
                 mainMediaImg.alt = img.alt;
-                // Fade back in
+                // Fade back in smoothly once loaded
                 mainMediaImg.style.opacity = 1;
-            }, 200);
+            };
 
             // Update active state
             thumbCards.forEach(c => c.classList.remove('active'));
@@ -171,10 +211,18 @@ document.addEventListener('DOMContentLoaded', () => {
                         newScrollLeft = 0;
                     }
 
+                    // Temporarily disable scroll-snap to prevent choppy motion fights
+                    slider.style.scrollSnapType = 'none';
+
                     slider.scrollTo({
                         left: newScrollLeft,
                         behavior: 'smooth'
                     });
+
+                    // Restore scroll-snap once smooth transition is finished
+                    setTimeout(() => {
+                        slider.style.scrollSnapType = 'x mandatory';
+                    }, 600);
                 }, 3000); // Slide every 3 seconds
             }
 
