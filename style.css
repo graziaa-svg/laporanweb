@@ -343,104 +343,9 @@ body.light-mode .smk-brand {
 }
 
 /* Mobile responsiveness */
-@media (max-width: 850px) {
-    .mobile-menu-toggle {
-        display: flex !important;
-    }
 
-    .header-inner {
-        position: relative;
-        width: calc(100% - 4rem) !important;
-    }
 
-    nav {
-        position: absolute !important;
-        top: calc(100% + 10px) !important;
-        left: 0 !important;
-        width: 100% !important;
-        background-color: var(--header-bg) !important;
-        backdrop-filter: blur(24px) !important;
-        -webkit-backdrop-filter: blur(24px) !important;
-        border: 1px solid var(--card-border) !important;
-        border-radius: 20px !important;
-        padding: 1.5rem !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 1.25rem !important;
-        opacity: 0 !important;
-        pointer-events: none !important;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35) !important;
-        transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
-        z-index: 999 !important;
-        transform-origin: top center !important;
-        bottom: auto !important;
-        right: auto !important;
-        transform: translateY(-15px) !important;
-    }
 
-    nav.open {
-        opacity: 1 !important;
-        pointer-events: auto !important;
-        transform: translateY(0) !important;
-    }
-
-    .nav-link {
-        font-size: 0.95rem;
-        width: fit-content;
-        text-align: center;
-        padding: 0.5rem 0;
-    }
-
-    .nav-link::after {
-        bottom: 0;
-        height: 2px;
-    }
-
-    .desktop-only-brand {
-        display: none !important;
-    }
-
-    .mobile-only-brand {
-        display: inline-flex !important;
-        margin-top: 0.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .header-inner {
-        width: calc(100% - 3rem) !important;
-        padding: 0 0.75rem 0 1.25rem !important;
-    }
-
-    .desktop-only-brand {
-        display: none !important;
-    }
-
-    .desktop-only-brand.smk-brand {
-        padding: 0.35rem;
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        justify-content: center;
-        box-sizing: border-box;
-    }
-
-    .desktop-only-brand.smk-brand span {
-        display: none;
-    }
-
-    /* Keep school logo display properties correct in hamburger dropdown */
-    .mobile-only-brand.smk-brand {
-        width: auto !important;
-        height: auto !important;
-        padding: 0.35rem 0.85rem !important;
-        border-radius: 100px !important;
-    }
-
-    .mobile-only-brand.smk-brand span {
-        display: inline !important;
-    }
-}
 
 /* ==================== 3. HERO SECTION ==================== */
 .hero {
@@ -455,17 +360,7 @@ body.light-mode .smk-brand {
     box-sizing: border-box;
 }
 
-@media (max-width: 968px) {
-    .hero {
-        height: auto;
-        min-height: auto;
-        padding: 4rem 0;
-    }
 
-    .profile-area {
-        justify-content: center;
-    }
-}
 
 .hero-centered {
     text-align: center;
@@ -509,22 +404,9 @@ body.light-mode .smk-brand {
     margin-top: 0;
 }
 
-@media (max-width: 768px) {
-    .hero-centered h1 {
-        font-size: 2.75rem;
-    }
-    .hero-centered .subtitle {
-        font-size: 1rem;
-    }
-}
 
-@media (max-width: 968px) {
-    .subtitle {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
+
+
 
 .subtitle strong {
     color: var(--text-white);
@@ -736,24 +618,7 @@ body.light-mode .smk-brand {
     box-sizing: border-box;
 }
 
-@media (max-width: 968px) {
-    .page-section {
-        height: auto;
-        min-height: auto;
-        padding: 4rem 0;
-    }
 
-    .section-container {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        text-align: center;
-    }
-
-
-    .instansi-gallery {
-        margin: 0 auto;
-    }
-}
 
 /* Custom Grid Swap for Profil Instansi (Gallery on Left, Info on Right) */
 #company .section-container {
@@ -762,11 +627,7 @@ body.light-mode .smk-brand {
     max-width: 1120px;
 }
 
-@media (max-width: 968px) {
-    #company .section-container {
-        grid-template-columns: 1fr;
-    }
-}
+
 
 /* Gallery Layout for Profil Instansi */
 .instansi-gallery {
@@ -873,11 +734,7 @@ body.light-mode .thumb-card {
     transform: scale(1.05);
 }
 
-@media (max-width: 640px) {
-    .heading-logo {
-        height: 3.2rem;
-    }
-}
+
 
 /* Company Logo Styles */
 .company-logo-container {
@@ -888,11 +745,7 @@ body.light-mode .thumb-card {
     width: 100%;
 }
 
-@media (max-width: 968px) {
-    .company-logo-container {
-        justify-content: center;
-    }
-}
+
 
 .company-logo-md {
     height: 4.5rem;
@@ -905,11 +758,7 @@ body.light-mode .thumb-card {
     transform: scale(1.05);
 }
 
-@media (max-width: 640px) {
-    .company-logo-md {
-        height: 3.5rem;
-    }
-}
+
 
 /* Badge Links Group */
 .badge-group {
@@ -982,15 +831,7 @@ body.light-mode .thumb-card {
     align-items: flex-start;
 }
 
-@media (max-width: 968px) {
-    .section-content {
-        align-items: center;
-    }
 
-    .badge-group {
-        justify-content: center;
-    }
-}
 
 .section-tag {
     color: var(--accent-orange);
@@ -1011,11 +852,7 @@ body.light-mode .thumb-card {
     text-transform: uppercase;
 }
 
-@media (max-width: 640px) {
-    .section-content h2 {
-        font-size: 2.25rem;
-    }
-}
+
 
 .section-desc {
     font-size: 0.95rem;
@@ -1026,13 +863,7 @@ body.light-mode .thumb-card {
     text-align: justify;
 }
 
-@media (max-width: 968px) {
-    .section-desc {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
+
 
 
 /* ==================== 5. AMBIENT GLOWS & ANIMATIONS ==================== */
@@ -1229,23 +1060,7 @@ body.light-mode footer {
     width: 100%;
 }
 
-@media (max-width: 968px) {
-    .tools-grid {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.25rem;
-        max-width: 320px;
-    }
 
-    .tools-header {
-        align-items: center;
-        text-align: center;
-    }
-
-    #projects .section-container {
-        align-items: center;
-    }
-}
 
 .tool-card {
     background-color: var(--card-bg);
@@ -1500,42 +1315,9 @@ footer {
     background: var(--accent-orange);
 }
 
-@media (max-width: 768px) {
-    .project-item-screens {
-        gap: 1.25rem;
-    }
 
-    .project-item-screens .browser-mockup {
-        flex: 0 0 85%;
-    }
 
-    .project-item-card {
-        padding: 1.5rem;
-    }
 
-    .project-section-title {
-        font-size: 1.85rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .project-item-card {
-        padding: 1.15rem;
-        border-radius: 20px;
-    }
-
-    .project-item-meta {
-        gap: 0.5rem;
-    }
-
-    .project-item-title {
-        font-size: 1.25rem;
-    }
-
-    .thumb-row {
-        gap: 0.5rem;
-    }
-}
 
 /* Browser Mockup Container */
 .browser-mockup {
@@ -1730,63 +1512,5 @@ body.light-mode ::-webkit-scrollbar-thumb {
     transition: var(--transition);
 }
 
-@media (max-width: 768px) {
-    .thank-you-title {
-        font-size: 2.75rem;
-    }
-}
 
-@media (max-width: 480px) {
-    /* Android / Portrait Mobile Devices */
-    .header-inner {
-        width: calc(100% - 3rem) !important;
-        padding: 0 0.75rem 0 1.25rem !important;
-    }
-    .header-right {
-        gap: 0.5rem !important;
-    }
-    .logo-area {
-        font-size: 1.1rem !important;
-    }
-    .theme-toggle,
-    .mobile-menu-toggle {
-        width: 32px !important;
-        height: 32px !important;
-    }
-    .desktop-only-brand {
-        width: 32px !important;
-        height: 32px !important;
-    }
-    .smk-logo {
-        width: 20px !important;
-        height: 20px !important;
-    }
 
-    .hero-centered {
-        padding: 5.5rem 1.5rem 3rem 1.5rem; /* Safe padding-top to prevent header collision */
-    }
-
-    .hero-centered h1 {
-        font-size: 2.1rem;
-        line-height: 1.25;
-    }
-    
-    .hero-centered .subtitle {
-        font-size: 0.9rem;
-        line-height: 1.5;
-        padding: 0 0.5rem;
-    }
-
-    .thank-you-title {
-        font-size: 2.2rem;
-    }
-
-    /* Adjust page-section margins and paddings for small screens */
-    .page-section {
-        padding: 2.5rem 0;
-    }
-
-    .section-container {
-        gap: 2rem;
-    }
-}
