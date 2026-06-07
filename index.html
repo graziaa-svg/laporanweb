@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presentasi Laporan PKL</title>
     <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.0.12">
 </head>
 
 <body>
@@ -22,10 +22,9 @@
                 <span class="logo-white">Hanif</span><span class="logo-orange">Garzia</span>
             </a>
             <nav>
-                <a href="#profil-instansi" class="nav-link">Profil Instansi</a>
-                <a href="#jurnal-kegiatan" class="nav-link">Jurnal Kegiatan</a>
-                <a href="#hasil-proyek" class="nav-link">Hasil Proyek</a>
-                <a href="#kesimpulan" class="nav-link">Kesimpulan</a>
+                <a href="#company" class="nav-link">Company</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="penutup.html" class="nav-link">Penutup</a>
             </nav>
             <div class="header-right">
                 <button class="theme-toggle" aria-label="Toggle Theme">
@@ -48,21 +47,25 @@
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                 </button>
-                <a href="#" class="btn-download">
-                    Unduh PDF
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                         stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14M12 5l7 7-7 7" />
+                        <line x1="3" y1="12" x2="21" y2="12" class="line-1"></line>
+                        <line x1="3" y1="6" x2="21" y2="6" class="line-2"></line>
+                        <line x1="3" y1="18" x2="21" y2="18" class="line-3"></line>
                     </svg>
-                </a>
+                </button>
+                <div class="smk-brand">
+                    <span>SMK TI</span>
+                    <img src="img/logo_ti.png" alt="Logo SMK TI" class="smk-logo">
+                </div>
             </div>
         </div>
     </header>
 
-    <div class="container">
-
-        <!-- ==================== HERO SECTION ==================== -->
-        <main id="beranda" class="hero">
+    <!-- ==================== HERO SECTION ==================== -->
+    <main id="beranda" class="hero">
+        <div class="section-container">
             <!-- Left Info Panel -->
             <div class="hero-content">
                 <h1>Presentasi Laporan<br>Magang di <span>PT. APPKEY</span></h1>
@@ -73,7 +76,7 @@
 
                 <!-- Action Button Group -->
                 <div class="btn-group">
-                    <a href="#profil-instansi" class="btn btn-primary">
+                    <a href="#company" class="btn btn-primary">
                         Mulai Presentasi
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -109,322 +112,97 @@
                     <div class="floating-tag">Web Dev.</div>
                 </div>
             </div>
-        </main>
-        <!-- ==================== PROFIL INSTANSI SECTION ==================== -->
-        <section id="profil-instansi" class="page-section">
-            <div class="section-container">
-                <!-- Left Column: Gallery -->
-                <div class="instansi-gallery">
-                    <div class="main-media-card">
-                        <div class="media-img-container">
-                            <img src="img/company.jpg" alt="PT. APPKEY Office" class="main-media-img">
-                        </div>
-                    </div>
-                    <!-- Thumbnail images row -->
-                    <div class="thumb-row">
-                        <div class="thumb-card active">
-                            <img src="img/company.jpg" alt="PT. APPKEY Office Front" class="thumb-img">
-                        </div>
-                        <div class="thumb-card">
-                            <img src="img/company2.jpg" alt="PT. APPKEY Workspace" class="thumb-img">
-                        </div>
-                        <div class="thumb-card">
-                            <img src="img/company3.jpg" alt="PT. APPKEY Team Meeting" class="thumb-img">
-                        </div>
+        </div>
+    </main>
+    <!-- ==================== PROFIL INSTANSI SECTION ==================== -->
+    <section id="company" class="page-section">
+        <div class="section-container">
+            <!-- Left Column: Gallery -->
+            <div class="instansi-gallery">
+                <div class="main-media-card">
+                    <div class="media-img-container">
+                        <img src="img/company.jpg" alt="PT. APPKEY Office" class="main-media-img">
                     </div>
                 </div>
-
-                <!-- Right Column: Company Info -->
-                <div class="section-content">
-                    <div class="section-tag">Informasi Umum</div>
-                    <h2>Tentang PT. APPKEY</h2>
-                    <p class="section-desc">
-                        PT. APPKEY merupakan perusahaan konsultan IT yang bergerak dibidang pembuatan aplikasi dan website, maupun solusi bisnis, yang
-                        memadukan teknologi AI (Vibe Coding) dan sentuhan engineer berpengalaman untuk mengubah desain Figma menjadi kode frontend yang presisi, cepat, dan minim rework
-                    </p>
-
-                    <!-- Visi Misi Grid -->
-                    <div class="visi-misi-grid">
-                        <div class="visi-misi-card">
-                            <span class="card-icon">🎯</span>
-                            <h4>VISI</h4>
-                            <p>Menggunakan SDA lokal menciptakan produk berkualitas dengan perspektif global.</p>
-                        </div>
-                        <div class="visi-misi-card">
-                            <span class="card-icon">🚀</span>
-                            <h4>MISI</h4>
-                            <p>PT. APPKEY menciptakan produk perangkat lunak seperti website dan aplikasi yang tidak hanya memenuhi standar nasional, tetapi juga berstandar internasional demi membawa nama baik IT Indonesia di kancah dunia."</p>
-                        </div>
+                <!-- Thumbnail images row -->
+                <div class="thumb-row">
+                    <div class="thumb-card active">
+                        <img src="img/company.jpg" alt="PT. APPKEY Office Front" class="thumb-img">
                     </div>
-
-                    <!-- Badge Link Group -->
-                    <div class="badge-group">
-                        <a href="https://maps.app.goo.gl/XkeLHWAvAgzjPUSJ7" target="_blank" rel="noopener noreferrer"
-                            class="badge-link">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                            <span>Lokasi Kantor (Denpasar)</span>
-                        </a>
-                        <a href="https://appkey.co.id" target="_blank" rel="noopener noreferrer" class="badge-link">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <line x1="2" y1="12" x2="22" y2="12"></line>
-                                <path
-                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-                                </path>
-                            </svg>
-                            <span>appkey.co.id</span>
-                        </a>
+                    <div class="thumb-card">
+                        <img src="img/company2.jpg" alt="PT. APPKEY Workspace" class="thumb-img">
+                    </div>
+                    <div class="thumb-card">
+                        <img src="img/company3.jpg" alt="PT. APPKEY Team Meeting" class="thumb-img">
+                    </div>
+                    <div class="thumb-card">
+                        <img src="img/company4.jpg" alt="PT. APPKEY Team Meeting" class="thumb-img">
+                    </div>
+                    <div class="thumb-card">
+                        <img src="img/company5.jpg" alt="PT. APPKEY Team Meeting" class="thumb-img">
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- ==================== JURNAL KEGIATAN SECTION ==================== -->
-        <section id="jurnal-kegiatan" class="page-section">
-            <div class="section-container">
-                <!-- Left Column: Jurnal Info -->
-                <div class="section-content">
-                    <div class="section-tag">Jurnal Kegiatan</div>
-                    <h2>Aktivitas & <span>Laporan Mingguan</span></h2>
-                    <p class="section-desc">
-                        Catatan aktivitas harian dan mingguan selama melaksanakan program magang. Mencakup pengerjaan
-                        modul, diskusi tim, dan pemecahan masalah.
-                    </p>
+            <!-- Right Column: Company Info -->
+            <div class="section-content">
+                <div class="section-tag">Informasi Umum</div>
+                <p class="section-desc">
+                    PT APPKEY merupakan perusahaan pengembang aplikasi dan sistem web inovatif yang mengadopsi tren Vibe Coding—kolaborasi revolusioner antara AI dan engineer ahli. Mereka berkomitmen menghadirkan layanan yang cepat, fleksibel, 
+                    dan berkualitas tinggi dengan efisiensi proses hingga 3x lebih cepat dari metode konvensional, siap mendukung akselerasi dan kesuksesan bisnis Anda.
+                </p>
 
-                    <!-- Info Grid Card -->
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <span class="info-label">Total Minggu</span>
-                            <span class="info-value">[e.g. 24 Minggu / 6 Bulan]</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Fokus Utama</span>
-                            <span class="info-value">[e.g. Frontend, API Integration]</span>
-                        </div>
-                    </div>
+                <!-- Company Logo -->
+                <div class="company-logo-container">
+                    <img src="img/logo_appkey.png" alt="PT. APPKEY Logo" class="company-logo-md">
                 </div>
 
-                <!-- Right Column: Visual Placeholder -->
-                <div class="section-media">
-                    <div class="media-card">
-                        <div class="media-img-container">
-                            <img src="" alt="Jurnal Kegiatan" class="media-img">
-
-                            <!-- Placeholder visual saat gambar kosong -->
-                            <div class="media-placeholder-visual">
-                                <div class="placeholder-icon">📝</div>
-                            </div>
-                        </div>
+                <!-- Badge Link Group -->
+                <div class="badge-group">
+                    <div class="badge-item">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <span>Pimpinan: Junnosuke Nakamura</span>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==================== HASIL PROYEK SECTION ==================== -->
-        <section id="hasil-proyek" class="page-section">
-            <div class="section-container">
-                <!-- Left Column: Proyek Info -->
-                <div class="section-content">
-                    <div class="section-tag">Hasil Proyek</div>
-                    <h2>Kontribusi & <span>Hasil Karya</span></h2>
-                    <p class="section-desc">
-                        Daftar proyek atau fitur yang telah berhasil didevelop dan dideploy selama masa magang di PT.
-                        APPKEY.
-                    </p>
-
-                    <!-- Info Grid Card -->
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <span class="info-label">Platform</span>
-                            <span class="info-value">[e.g. Web Application / Mobile App]</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Tech Stack</span>
-                            <span class="info-value">[e.g. HTML5, CSS3, JS, PHP]</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Column: Visual Placeholder -->
-                <div class="section-media">
-                    <div class="media-card">
-                        <div class="media-img-container">
-                            <img src="" alt="Hasil Proyek" class="media-img">
-
-                            <!-- Placeholder visual saat gambar kosong -->
-                            <div class="media-placeholder-visual">
-                                <div class="placeholder-icon">💻</div>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="https://maps.app.goo.gl/XkeLHWAvAgzjPUSJ7" target="_blank" rel="noopener noreferrer"
+                        class="badge-link">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>Lokasi Kantor (Denpasar)</span>
+                    </a>
+                    <a href="https://appkey.co.id" target="_blank" rel="noopener noreferrer" class="badge-link">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                            </path>
+                        </svg>
+                        <span>appkey.co.id</span>
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- ==================== KESIMPULAN SECTION ==================== -->
-        <section id="kesimpulan" class="page-section">
-            <div class="section-container">
-                <!-- Left Column: Kesimpulan Info -->
-                <div class="section-content">
-                    <div class="section-tag">Kesimpulan</div>
-                    <h2>Pembelajaran & <span>Rangkuman</span></h2>
-                    <p class="section-desc">
-                        Kesimpulan dan saran dari hasil pelaksanaan Praktik Kerja Lapangan (PKL) mengenai industri kerja
-                        nyata dan pengembangan skill diri.
-                    </p>
 
-                    <!-- Info Grid Card -->
-                    <div class="info-grid">
-                        <div class="info-item" style="grid-column: span 2;">
-                            <span class="info-label">Saran</span>
-                            <span class="info-value">[Saran untuk adik kelas / sekolah / instansi magang]</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Column: Visual Placeholder -->
-                <div class="section-media">
-                    <div class="media-card">
-                        <div class="media-img-container">
-                            <img src="" alt="Kesimpulan" class="media-img">
-
-                            <!-- Placeholder visual saat gambar kosong -->
-                            <div class="media-placeholder-visual">
-                                <div class="placeholder-icon">🎓</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </div>
 
     <!-- ==================== FOOTER SECTION ==================== -->
     <footer>
         <div class="footer-content">
-            <p>&copy; 2026 Hanif Garzia. Hak Cipta Dilindungi.</p>
+            <p>&copy; 2026 Hanif Garzia. RPL 3</p>
             <p class="footer-sub">Laporan PKL SMK - PT. APPKEY</p>
         </div>
     </footer>
 
-    <!-- Theme Toggle & Active Scroll Linking Script -->
-    <script>
-        const themeToggle = document.querySelector('.theme-toggle');
-        const sunIcon = document.querySelector('.sun-icon');
-        const moonIcon = document.querySelector('.moon-icon');
-
-        // Function to update icon visibility
-        function updateIcons() {
-            if (document.body.classList.contains('light-mode')) {
-                sunIcon.style.display = 'none';
-                moonIcon.style.display = 'block';
-            } else {
-                sunIcon.style.display = 'block';
-                moonIcon.style.display = 'none';
-            }
-        }
-
-        // Load theme from localStorage
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'light') {
-            document.body.classList.add('light-mode');
-        }
-
-        // Initialize icons on load
-        updateIcons();
-
-        // Toggle theme on button click
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('light-mode');
-            updateIcons();
-
-            // Save choice in localStorage
-            if (document.body.classList.contains('light-mode')) {
-                localStorage.setItem('theme', 'light');
-            } else {
-                localStorage.setItem('theme', 'dark');
-            }
-        });
-
-        // Intersection Observer or Scroll highlight logic for navigation active dot
-        const sections = document.querySelectorAll('main, section');
-        const navLinks = document.querySelectorAll('nav .nav-link');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                // Set current active section when page reaches near the top of that section
-                if (pageYOffset >= (sectionTop - 150)) {
-                    current = section.getAttribute('id') || '';
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        // Interactive Gallery & Slideshow for Profil Instansi
-        const mainMediaImg = document.querySelector('#profil-instansi .main-media-img');
-        const thumbCards = document.querySelectorAll('#profil-instansi .thumb-card');
-        let currentIndex = 0;
-        let autoplayTimer = null;
-
-        function showImage(index) {
-            const card = thumbCards[index];
-            const img = card.querySelector('.thumb-img');
-
-            // Add fade-out transition effect
-            mainMediaImg.style.opacity = 0;
-
-            setTimeout(() => {
-                mainMediaImg.src = img.src;
-                mainMediaImg.alt = img.alt;
-                // Fade back in
-                mainMediaImg.style.opacity = 1;
-            }, 200);
-
-            // Update active state
-            thumbCards.forEach(c => c.classList.remove('active'));
-            card.classList.add('active');
-
-            currentIndex = index;
-        }
-
-        function startAutoplay() {
-            autoplayTimer = setInterval(() => {
-                let nextIndex = (currentIndex + 1) % thumbCards.length;
-                showImage(nextIndex);
-            }, 2000);
-        }
-
-        function resetAutoplay() {
-            clearInterval(autoplayTimer);
-            startAutoplay();
-        }
-
-        // Add manual click event to thumbnails
-        thumbCards.forEach((card, index) => {
-            card.addEventListener('click', () => {
-                showImage(index);
-                resetAutoplay();
-            });
-        });
-
-        // Initialize slideshow
-        startAutoplay();
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
