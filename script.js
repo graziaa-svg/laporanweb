@@ -1,21 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     // ==================== COMMON LAYOUT SCRIPTS ====================
-    const themeToggle = document.querySelector('.theme-toggle');
-    const sunIcon = document.querySelector('.sun-icon');
-    const moonIcon = document.querySelector('.moon-icon');
+    const themeToggles = document.querySelectorAll('.theme-toggle');
+    const sunIcons = document.querySelectorAll('.sun-icon');
+    const moonIcons = document.querySelectorAll('.moon-icon');
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mainNav = document.querySelector('nav');
     const navLinks = document.querySelectorAll('nav .nav-link');
 
     // Function to update icon visibility
     function updateIcons() {
-        if (!sunIcon || !moonIcon) return;
+        if (sunIcons.length === 0 || moonIcons.length === 0) return;
         if (document.body.classList.contains('light-mode')) {
-            sunIcon.style.display = 'none';
-            moonIcon.style.display = 'block';
+            sunIcons.forEach(icon => icon.style.display = 'none');
+            moonIcons.forEach(icon => icon.style.display = 'block');
         } else {
-            sunIcon.style.display = 'block';
-            moonIcon.style.display = 'none';
+            sunIcons.forEach(icon => icon.style.display = 'block');
+            moonIcons.forEach(icon => icon.style.display = 'none');
         }
     }
 
@@ -29,17 +29,19 @@ document.addEventListener('DOMContentLoaded', () => {
     updateIcons();
 
     // Toggle theme on button click
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('light-mode');
-            updateIcons();
+    if (themeToggles.length > 0) {
+        themeToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                document.body.classList.toggle('light-mode');
+                updateIcons();
 
-            // Save choice in localStorage
-            if (document.body.classList.contains('light-mode')) {
-                localStorage.setItem('theme', 'light');
-            } else {
-                localStorage.setItem('theme', 'dark');
-            }
+                // Save choice in localStorage
+                if (document.body.classList.contains('light-mode')) {
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
         });
     }
 
